@@ -18,7 +18,7 @@ export class PokemonService {
     this.API = environment.apiURL + environment.apiVersion;
   }
 
-  getListPokemon(): Observable<PokemonList> {
+  getPokemonList(): Observable<PokemonList> {
     return this.httpClient.get<PokemonList>(this.API + '/pokemon');
   }
 
