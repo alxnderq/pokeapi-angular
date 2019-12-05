@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
@@ -8,13 +8,9 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class PokemonListComponent implements OnInit {
 
-  progress: number;
-
   constructor(
-    private pokemonService: PokemonService,
-    private ngZone: NgZone
+    private pokemonService: PokemonService
   ) {
-    this.progress = 0;
   }
 
   ngOnInit() {
@@ -26,35 +22,6 @@ export class PokemonListComponent implements OnInit {
       .subscribe((result) => {
         console.log(result);
       });
-  }
-
-  processWithinAngularZone() {
-    this.progress = 0;
-    this.increaseProgress(() => console.log('Done!'));
-  }
-
-  increaseProgress(doneCallback: () => void) {
-    this.progress += 1;
-    console.log(`Current progress: ${this.progress}%`);
-
-    if (this.progress < 100) {
-      window.setTimeout(() => {
-        this.increaseProgress(doneCallback);
-      }, 10);
-    } else {
-      doneCallback();
-    }
-  }
-
-  processOutsideAngularZone() {
-    this.progress = 0;
-    this.ngZone.runOutsideAngular(() => {
-      this.increaseProgress(() => {
-        this.ngZone.run(() => {
-          console.log('Outside Done!');
-        });
-      });
-    });
   }
 
 }
