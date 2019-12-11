@@ -1,4 +1,9 @@
 // Import config
+@import "styles/config/fonts";
 @import "styles/config/variables";
 // Import Bootstrap styles
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "styles/imports/bootstrap";
+// Import default styles
+@import "styles/base/base";
+// Import style components
+@import "styles/components/buttons";

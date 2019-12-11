@@ -1,0 +1,7 @@
+@import "~src/styles/config/variables";
+
+.btn-secondary {
+  --button-background-color: #fff;
+  --button-color: #{$secondary};
+  border: 2px solid #{$primary}
+}
