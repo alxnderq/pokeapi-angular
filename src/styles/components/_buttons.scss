@@ -1,8 +1,17 @@
 button {
   background-color: var(--button-background-color);
+  border: none;
+  border-radius: 3px;
   box-sizing: content-box;
   color: var(--button-color);
-  border: none;
+  display: inline-block;
   font-size: 1rem;
-  padding: 8px 20px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+  }
 }

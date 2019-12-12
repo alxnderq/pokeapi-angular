@@ -8,11 +8,57 @@
       <h5>Soy un encabezado H5</h5>
       <h6>Soy un encabezado H6</h6>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>Botones</h2>
+    </div>
     <div class="col-12">
       <app-primary-button buttonText="Primary Button"></app-primary-button>
       <app-secondary-button
         buttonText="Secondary Button"
       ></app-secondary-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>Parrafos</h2>
+    </div>
+    <div class="col-12">
+      <p>Soy un parrafo</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat omnis
+        tempore suscipit dolorum nesciunt, magni nostrum eveniet, numquam,
+        exercitationem dolor delectus quis repellendus! Reiciendis, laborum!
+        Nesciunt asperiores error expedita aperiam?
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>Formularios</h2>
+    </div>
+    <div class="col-12">
+      <form>
+        <div class="form-group">
+          <label for="username">Usuario</label>
+          <input type="text" class="form-control" id="username" />
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="rememberCheck" />
+          <label class="form-check-label" for="rememberCheck"
+            >Remember me</label
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Clave</label>
+          <input type="password" class="form-control" id="password" />
+        </div>
+        <app-primary-button
+          buttonType="submit"
+          buttonText="Submit"
+        ></app-primary-button>
+      </form>
     </div>
   </div>
 </div>

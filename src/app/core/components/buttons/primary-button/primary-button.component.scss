@@ -1,6 +1,37 @@
 @import "~src/styles/config/variables";
 
 .btn-primary {
-  --button-background-color: #{$primary};
+  --button-background-color: #ffdc00;
   --button-color: #{$secondary};
+  padding: 8px 20px;
+
+  &:hover {
+    --button-background-color: #fc0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 24px solid #fc0;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 24px solid #fe0;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
 }

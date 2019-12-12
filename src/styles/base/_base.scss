@@ -1,10 +1,19 @@
+@import "../config/variables";
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: $secondary;
   font-family: "PreloSlab-Bold", Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: $secondary;
+  font-family: "PreloSlab-Book", Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
 }
 
 button {

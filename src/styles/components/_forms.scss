@@ -1,0 +1,26 @@
+@import "../config/variables";
+
+form {
+  .form-group {
+    & > * {
+      color: $secondary;
+    }
+
+    label,
+    input {
+      font-size: 0.875rem;
+    }
+
+    label {
+      font-family: "PreloSlab-Bold", Arial, Helvetica, sans-serif;
+    }
+
+    input:not([type="checkbox"]) {
+      background-color: #fff;
+      border: solid 1px #d5d5d5;
+      border-radius: 3px;
+      font-family: "PreloSlab-Book", Arial, Helvetica, sans-serif;
+      height: 40px;
+    }
+  }
+}

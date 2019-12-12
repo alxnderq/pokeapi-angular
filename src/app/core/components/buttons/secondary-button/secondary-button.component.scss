@@ -3,5 +3,10 @@
 .btn-secondary {
   --button-background-color: #fff;
   --button-color: #{$secondary};
-  border: 2px solid #{$primary}
+  border: 2px solid #{$primary};
+  padding: 6px 20px;
+
+  &:hover {
+    --button-background-color: #fff9e5;
+  }
 }
