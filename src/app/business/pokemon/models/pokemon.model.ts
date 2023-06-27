@@ -1,7 +1,7 @@
 export interface Pokemon {
   id: number;
   name: string;
-  sprites: Sprites[];
+  sprites: Sprites;
   types: Types[];
 }
 
@@ -14,7 +14,7 @@ export interface Sprites {
   front_female?: string;
   front_shiny: string;
   front_shiny_female?: string;
-  // other: Other;
+  other: Other;
   // versions: Versions;
 }
 
@@ -28,11 +28,11 @@ export interface Type {
   url: string
 }
 
-/*
+
 export interface Other {
   dream_world: DreamWorld
   home: Home
-  "official-artwork": OfficialArtwork
+  'official-artwork': OfficialArtwork
 }
 
 export interface DreamWorld {
@@ -52,6 +52,7 @@ export interface OfficialArtwork {
   front_shiny: string
 }
 
+/*
 export interface Versions {
   "generation-i": GenerationI
   "generation-ii": GenerationIi

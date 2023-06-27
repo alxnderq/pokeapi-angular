@@ -20,10 +20,10 @@ module.exports = {
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
-      "primary": "#DC0A2D"
+      "primary": "#DC0A2D",
+      "white": "#FFFFFF",
     },
     extend: {},
   },
   plugins: [],
 }
-

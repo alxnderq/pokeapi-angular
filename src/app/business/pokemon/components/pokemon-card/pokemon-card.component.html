@@ -1,1 +1,5 @@
-<p>pokemon-card works!</p>
+<div class="pokemon-card">
+    <span class="card-id"># {{ pokemon.id }}</span>
+    <img class="card-image" width="72px" height="72px" [src]="pokemon.sprites.other['official-artwork'].front_default" alt="pokemon">
+    <span class="card-name">{{ pokemon.name }}</span>
+</div>

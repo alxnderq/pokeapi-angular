@@ -1,0 +1,13 @@
+.pokemon-card {
+  @apply py-1 px-2;
+  @apply bg-white;
+  @apply rounded-lg;
+  width: 6.5rem;
+  height: 6.5rem;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.20);
+
+  @apply flex;
+  @apply flex-col;
+  @apply justify-between;
+  @apply items-center;
+}

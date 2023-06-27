@@ -5,6 +5,7 @@ import { PokemonLayoutComponent } from './pokemon-layout.component';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { PokemonContainerComponent, PokemonView } from './views/pokemon';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
     PokemonLayoutComponent,
     PokemonContainerComponent,
     PokemonView,
-    PokemonCardComponent
+    PokemonCardComponent,
+    PokemonListComponent
   ],
   imports: [
     CommonModule,
