@@ -1,3 +1,8 @@
-<ng-container *ngIf="list">
-  <app-pokemon-list [list]="list"></app-pokemon-list>
-</ng-container>
+<div class="pokemon-search-container">
+
+</div>
+<div class="pokemon-list-container">
+    <ng-container *ngIf="list">
+        <app-pokemon-list [list]="list"></app-pokemon-list>
+    </ng-container>
+</div>

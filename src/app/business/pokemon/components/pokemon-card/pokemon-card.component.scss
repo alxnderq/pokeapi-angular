@@ -8,6 +8,24 @@
 
   @apply flex;
   @apply flex-col;
-  @apply justify-between;
+  @apply justify-start;
   @apply items-center;
+
+  & > .card-id {
+    @apply self-end;
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+  }
+
+  & > .card-image {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  & > .card-name {
+    @apply text-center;
+    @apply capitalize;
+    font-size: 0.625rem;
+    line-height: 1rem;
+  }
 }

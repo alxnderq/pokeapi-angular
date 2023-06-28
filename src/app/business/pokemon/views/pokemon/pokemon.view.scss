@@ -1,0 +1,15 @@
+$pokemon-search-height: 4.5rem;
+
+.pokemon-search-container {
+    @apply pt-3 pr-3 pb-6 pl-3;
+    @apply w-full;
+    height: $pokemon-search-height;
+}
+
+.pokemon-list-container {
+    @apply bg-white;
+    @apply py-6 px-3;
+    @apply rounded-lg;
+    height: calc(100% - $pokemon-search-height);
+    @apply overflow-auto;
+}

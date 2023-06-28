@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, combineLatest, map, switchMap } from 'rxjs';
+import { Observable, combineLatest, switchMap } from 'rxjs';
 import { Pokemon, PokemonList, PokemonResult } from '../../models';
 import { PokemonService } from '../../services';
 
@@ -18,7 +18,7 @@ export class PokemonContainerComponent {
     this.getPokemonList();
   }
 
-  getPokemonList(offset: number = 0, limit: number = 10): void {
+  getPokemonList(offset: number = 0, limit: number = 20): void {
     this.pokemonList$ = this.pokemonService.getAllPokemon(offset, limit)
       .pipe(
         switchMap((data: PokemonList) => {
