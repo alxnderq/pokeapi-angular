@@ -1,8 +1,16 @@
-<div class="pokemon-search-container">
-
-</div>
-<div class="pokemon-list-container">
-    <ng-container *ngIf="list">
-        <app-pokemon-list [list]="list"></app-pokemon-list>
+<div class="pokemon-container">
+  <div class="pokemon-title-container">
+    <div class="pokemon-title">
+      <img src="/assets/images/pokeball.svg" alt="pokeball">
+      <h1>Pokédex</h1>
+    </div>
+    <div class="search-bar">
+      <app-pokemon-search (onEnterEmitter)="onSearchPokemon($event)"></app-pokemon-search>
+    </div>
+  </div>
+  <div class="pokemon-list-container">
+    <ng-container *ngIf="presenter.pokemonList$ | async as list">
+      <app-pokemon-list [list]="list" (selectedPokemon)="onSelectedPokemon($event)"></app-pokemon-list>
     </ng-container>
+  </div>
 </div>

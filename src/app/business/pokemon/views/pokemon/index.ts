@@ -1,2 +1,2 @@
-export * from './pokemon.container';
+export * from './pokemon.presenter';
 export * from './pokemon.view';

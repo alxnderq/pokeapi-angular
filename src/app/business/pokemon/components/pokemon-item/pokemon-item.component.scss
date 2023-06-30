@@ -27,4 +27,9 @@
     font-size: 0.625rem;
     line-height: 1rem;
   }
+
+  &:hover {
+    @apply cursor-pointer;
+    @apply bg-gray-light;
+  }
 }

@@ -1,24 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PokemonLayoutComponent } from './pokemon-layout.component';
-import { PokemonContainerComponent } from './views/pokemon';
+import { PokemonLayoutComponent } from '.';
+import { PokemonView } from './views/pokemon';
+import { PokemonDetailsView } from './views/pokemon-details';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: PokemonLayoutComponent,
-    children: [
-      {
+    {
         path: '',
-        component: PokemonContainerComponent
-      }
-    ]
-  }
+        component: PokemonLayoutComponent,
+        children: [
+            {
+                path: '',
+                component: PokemonView
+            },
+            {
+              path: 'pokemon/:name',
+              component: PokemonDetailsView
+            }
+        ]
+    }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class PokemonRoutingModule { }

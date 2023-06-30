@@ -3,8 +3,6 @@
     @apply flex-row;
     @apply flex-wrap;
     @apply items-start;
-    @apply justify-start;
-    @apply gap-2;
-    @apply self-stretch;
-    flex: 1 0 0;
+    @apply justify-between;
+    @apply gap-y-2;
 }

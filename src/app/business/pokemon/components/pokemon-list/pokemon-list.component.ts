@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { Pokemon } from '../../models';
 
 @Component({
@@ -10,6 +10,7 @@ import { Pokemon } from '../../models';
 export class PokemonListComponent implements OnChanges {
 
   @Input() list: Pokemon[];
+  @Output() selectedPokemon: EventEmitter<string> = new EventEmitter<string>();
 
   pokemonList: Pokemon[];
 
@@ -22,6 +23,10 @@ export class PokemonListComponent implements OnChanges {
     if (changes['list'] && changes['list'].currentValue) {
       this.pokemonList = changes['list'].currentValue;
     }
+  }
+
+  onSelectedPokemon(name: string) {
+    this.selectedPokemon.emit(name);
   }
 
 }

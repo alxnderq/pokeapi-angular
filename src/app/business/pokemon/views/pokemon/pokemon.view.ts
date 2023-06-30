@@ -1,23 +1,25 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
-import { Pokemon } from '../../models';
+import { Component } from '@angular/core';
+import { PokemonPresenter } from './pokemon.presenter';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-pokemon-view',
   templateUrl: './pokemon.view.html',
-  styleUrls: ['./pokemon.view.scss']
+  styleUrls: ['./pokemon.view.scss'],
+  providers: [PokemonPresenter]
 })
-export class PokemonView implements OnChanges {
+export class PokemonView {
 
-  @Input()
-  list!: Pokemon[];
-
-  constructor() {
+  constructor(
+    protected presenter: PokemonPresenter
+  ) {
   }
 
-  ngOnChanges() {
-    console.log('changes');
-    console.log(this.list);
+  onSearchPokemon(pokemonName: string) {
+    this.presenter.onSearchPokemon(pokemonName);
+  }
+
+  onSelectedPokemon(name: string) {
+    this.presenter.onSelectedPokemon(name);
   }
 
 }

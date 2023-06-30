@@ -1,25 +1,29 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { PokemonLayoutComponent } from './pokemon-layout.component';
-import { PokemonRoutingModule } from './pokemon-routing.module';
-import { PokemonContainerComponent, PokemonView } from './views/pokemon';
-import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonLayoutComponent, PokemonRoutingModule } from '.';
+import { PokemonItemComponent, PokemonListComponent, PokemonSearchComponent } from './components';
+import { PokemonView } from './views/pokemon';
+import { PokemonDetailsView } from './views/pokemon-details';
 
 
 @NgModule({
   declarations: [
     PokemonLayoutComponent,
-    PokemonContainerComponent,
     PokemonView,
-    PokemonCardComponent,
-    PokemonListComponent
+    PokemonItemComponent,
+    PokemonListComponent,
+    PokemonSearchComponent,
+    PokemonDetailsView
   ],
   imports: [
     CommonModule,
     PokemonRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
+  ],
+  exports: [
   ]
 })
 export class PokemonModule { }
