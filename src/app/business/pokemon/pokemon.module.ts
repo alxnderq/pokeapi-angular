@@ -6,6 +6,7 @@ import { PokemonLayoutComponent, PokemonRoutingModule } from '.';
 import { PokemonItemComponent, PokemonListComponent, PokemonSearchComponent } from './components';
 import { PokemonView } from './views/pokemon';
 import { PokemonDetailsView } from './views/pokemon-details';
+import { PokemonCardComponent } from './components/pokemon-card';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { PokemonDetailsView } from './views/pokemon-details';
     PokemonItemComponent,
     PokemonListComponent,
     PokemonSearchComponent,
+    PokemonCardComponent,
     PokemonDetailsView
   ],
   imports: [

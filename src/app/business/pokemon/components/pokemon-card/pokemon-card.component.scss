@@ -1,0 +1,111 @@
+$height-header: 13.75rem;
+
+.pokemon-card-container {
+  @apply w-full;
+  @apply h-full;
+  @apply p-1;
+}
+
+.pokemon-card {
+  @apply flex;
+  @apply flex-col;
+  width: inherit;
+  height: inherit;
+}
+
+.pokemon-card-header {
+  @apply w-full;
+  height: $height-header;
+  @apply relative;
+
+  &::before {
+    @apply block;
+    @apply absolute;
+    @apply left-0;
+    @apply top-0;
+    @apply bg-pokeball;
+    @apply bg-no-repeat;
+    @apply w-full;
+    @apply h-full;
+    content: " ";
+    background-size: 13rem;
+    opacity: 0.1;
+    background-position: right 0.25rem top 0.25rem;
+  }
+
+}
+
+.pokemon-card-title {
+  @apply relative;
+  @apply pt-5 pr-7 pl-7 pb-6;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-between;
+
+  .card-back {
+    @apply w-8;
+    @apply h-8;
+  }
+
+  .card-title,
+  .card-subtitle {
+    @apply not-italic;
+    @apply font-bold;
+    @apply text-white;
+    @apply capitalize;
+  }
+
+  .card-title {
+    @apply text-2xl;
+  }
+
+  .card-subtitle {
+    @apply text-xs;
+  }
+}
+
+.pokemon-card-image {
+  @apply absolute;
+  @apply left-20;
+  @apply top-20;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+
+  & > .pokemon-image-sprite {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+
+.pokemon-card-details {
+  @apply w-full;
+  @apply bg-white;
+  @apply rounded-lg;
+  @apply pt-14 pr-5 pb-5 pl-5;
+  height: calc(100% - $height-header);
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply gap-y-4;
+}
+
+.pokemon-card-types {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-x-4;
+}
+
+.pokemon-type-tick {
+  padding: 0.12rem 0.5rem;
+  font-size: 0.625rem;
+  line-height: 1rem;
+  border-radius: 0.625rem;
+  @apply font-bold;
+  @apply not-italic;
+  @apply font-bold;
+  @apply text-white;
+  @apply capitalize;
+}

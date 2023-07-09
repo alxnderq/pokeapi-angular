@@ -14,17 +14,19 @@
     @apply absolute;
     @apply left-2;
     @apply top-2;
-
+    @apply bg-pokeball;
+    @apply bg-no-repeat;
     content: " ";
     width: calc(100% - 1rem);
     height: calc(100% - 1rem);
-    background-image: url("/assets/images/pokeball.svg");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: top;
     background-size: 13rem;
     opacity: 0.1;
+    background-position: right 0.25rem top 0.25rem;
   }
+}
+
+.pokemon-card-header {
+  @apply h-56;
 }
 
 .pokemon-card-title {
@@ -55,4 +57,24 @@
 
 .card-subtitle {
   @apply text-xs;
+}
+
+.pokemon-image {
+  @apply flex;
+  @apply relative;
+  @apply z-50;
+  @apply justify-center;
+  @apply items-center;
+
+  & > .pokemon-image-sprite {
+    @apply w-52;
+    @apply h-52;
+  }
+}
+
+.pokemon-details {
+  @apply w-full;
+  @apply bg-white;
+  @apply rounded-lg;
+  height: calc(100% - 13.75rem);
 }

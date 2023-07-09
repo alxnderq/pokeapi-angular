@@ -1,18 +1,3 @@
 <ng-container *ngIf="presenter.pokemon$ | async as pokemon">
-  <div [className]="'pokemon-details-container ' + getBackgroundColorStyle(pokemon.types[0].type.name)">
-    <div class="pokemon-card">
-      <div class="pokemon-card-title">
-        <button type="button" class="card-back" routerLink="../../">
-          <img src="/assets/images/arrow_back.svg" alt="arrow_back">
-        </button>
-        <h1 class="card-title">{{ pokemon.name }}</h1>
-        <h2 class="card-subtitle">#{{ pokemon.id | number: '3.0-0' }}</h2>
-      </div>
-      <div class="pokemon-image">
-        <img [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.name">
-      </div>
-
-
-    </div>
-  </div>
+  <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
 </ng-container>

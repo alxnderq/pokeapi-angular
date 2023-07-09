@@ -1,0 +1,34 @@
+<ng-container *ngIf="pokemon">
+  <div class="pokemon-card-container" [ngClass]="this.backgroundColorClass">
+    <div class="pokemon-card">
+      <div class="pokemon-card-header">
+        <div class="pokemon-card-title">
+          <button type="button" class="card-back" routerLink="../../">
+            <img src="/assets/images/arrow_back.svg" alt="arrow_back">
+          </button>
+          <h1 class="card-title">{{ pokemon.name }}</h1>
+          <h2 class="card-subtitle">#{{ pokemon.id | number: '3.0-0' }}</h2>
+        </div>
+      </div>
+      <div class="pokemon-card-image">
+        <img class="pokemon-image-sprite" [src]="pokemon.sprites.other['official-artwork'].front_default"
+          [alt]="pokemon.name">
+      </div>
+      <div class="pokemon-card-details">
+        <div class="pokemon-card-types">
+          <ng-container *ngFor="let item of pokemon.types">
+            <span [className]="'pokemon-type-tick ' + item.type.backgroundColor">{{ item.type.name }}</span>
+          </ng-container>
+        </div>
+        <div class="pokemon-card-about">
+          <h2 class="card-subtitle" [ngClass]="this.textColorClass">About</h2>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+</ng-container>
