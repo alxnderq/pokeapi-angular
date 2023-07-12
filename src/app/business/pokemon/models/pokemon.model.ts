@@ -3,6 +3,15 @@ export interface Pokemon {
   name: string;
   sprites: Sprites;
   types: Types[];
+  weight: number;
+  height: number;
+  abilities: Ability[];
+}
+
+export interface Ability {
+  ability: Type;
+  is_hidden: boolean;
+  slot: number;
 }
 
 export interface Sprites {

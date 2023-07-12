@@ -22,6 +22,43 @@
         </div>
         <div class="pokemon-card-about">
           <h2 class="card-subtitle" [ngClass]="this.textColorClass">About</h2>
+
+          <div class="pokemon-attributes">
+            <div class="attribute-details">
+              <div class="attribute-value">
+                <img src="/assets/images/weight.svg" alt="icon_weight">
+                <span>{{ pokemon.weight /10 | number: '1.1-2' }} kg</span>
+              </div>
+              <h3 class="attribute-title">Weight</h3>
+            </div>
+            <div class="attribute-details">
+              <div class="attribute-value">
+                <img src="/assets/images/straighten.svg" alt="icon_straighten">
+                <span>{{ pokemon.height /10 | number: '1.1-2' }} m</span>
+              </div>
+              <h3 class="attribute-title">Height</h3>
+            </div>
+            <div class="attribute-details">
+              <div class="attribute-value attribute-value-list">
+                <ng-container *ngFor="let item of pokemon.abilities">
+                  <span class="attribute-value">{{ item.ability.name }}</span>
+                </ng-container>
+              </div>
+              <h3 class="attribute-title">Moves</h3>
+            </div>
+          </div>
+
+          <div class="pokemon-about-flavour">
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis eros vitae tellus condimentum maximus sit amet in
+              eros.
+            </span>
+          </div>
+
+          <div class="pokemon-about-stats">
+            <h2 class="card-subtitle" [ngClass]="this.textColorClass">Base Stats</h2>
+          </div>
+
         </div>
       </div>
 

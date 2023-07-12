@@ -32,7 +32,28 @@ $height-header: 13.75rem;
     opacity: 0.1;
     background-position: right 0.25rem top 0.25rem;
   }
+}
 
+.card-back {
+  @apply w-8;
+  @apply h-8;
+}
+
+.card-title,
+.card-subtitle {
+  @apply not-italic;
+  @apply font-bold;
+  @apply capitalize;
+}
+
+.card-title {
+  @apply text-2xl;
+  @apply text-white;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  @apply leading-4;
 }
 
 .pokemon-card-title {
@@ -43,25 +64,8 @@ $height-header: 13.75rem;
   @apply items-center;
   @apply justify-between;
 
-  .card-back {
-    @apply w-8;
-    @apply h-8;
-  }
-
-  .card-title,
-  .card-subtitle {
-    @apply not-italic;
-    @apply font-bold;
+  & > .card-subtitle {
     @apply text-white;
-    @apply capitalize;
-  }
-
-  .card-title {
-    @apply text-2xl;
-  }
-
-  .card-subtitle {
-    @apply text-xs;
   }
 }
 
@@ -101,11 +105,78 @@ $height-header: 13.75rem;
 .pokemon-type-tick {
   padding: 0.12rem 0.5rem;
   font-size: 0.625rem;
-  line-height: 1rem;
+  @apply leading-4;
   border-radius: 0.625rem;
   @apply font-bold;
   @apply not-italic;
   @apply font-bold;
   @apply text-white;
   @apply capitalize;
+}
+
+.pokemon-card-about {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-y-4;
+  @apply text-justify;
+}
+
+.pokemon-attributes {
+  @apply flex;
+  @apply flex-row;
+  @apply self-stretch;
+  @apply justify-around;
+
+  & > .attribute-details {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-y-1;
+
+    & > .attribute-value {
+      @apply flex;
+      @apply flex-row;
+      @apply items-center;
+      @apply py-2;
+      @apply gap-y-2;
+
+      & > span {
+        @apply text-gray-dark;
+        @apply text-justify;
+        font-size: 0.625rem;
+        @apply not-italic;
+        @apply font-normal;
+        @apply leading-4;
+      }
+    }
+
+    & > .attribute-title {
+      @apply text-gray-medium;
+      @apply text-center;
+      font-size: 0.5rem;
+      @apply not-italic;
+      @apply font-normal;
+      @apply leading-3;
+    }
+
+    & > .attribute-value-list {
+      @apply flex-col;
+      @apply items-center;
+      @apply p-0;
+      @apply gap-0;
+      @apply capitalize;
+    }
+  }
+}
+
+.pokemon-about-flavour {
+  & > span {
+    @apply text-gray-dark;
+    @apply text-justify;
+    font-size: 0.625rem;
+    @apply not-italic;
+    @apply font-normal;
+    @apply leading-4;
+  }
 }
