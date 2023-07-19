@@ -58,7 +58,7 @@ $height-header: 13.75rem;
 
 .pokemon-card-title {
   @apply relative;
-  @apply pt-5 pr-7 pl-7 pb-6;
+  @apply pt-5 pr-0 pl-0 pb-6;
   @apply flex;
   @apply flex-row;
   @apply items-center;
