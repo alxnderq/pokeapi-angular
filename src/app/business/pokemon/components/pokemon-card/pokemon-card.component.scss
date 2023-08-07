@@ -71,8 +71,8 @@ $height-header: 13.75rem;
 
 .pokemon-card-image {
   @apply absolute;
-  @apply left-20;
   @apply top-20;
+  @apply w-full;
   @apply flex;
   @apply items-center;
   @apply justify-center;

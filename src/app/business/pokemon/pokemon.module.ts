@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PokemonLayoutComponent, PokemonRoutingModule } from '.';
-import { PokemonItemComponent, PokemonListComponent, PokemonSearchComponent } from './components';
+import { PokemonCardComponent } from './components/pokemon-card';
+import { PokemonItemComponent } from './components/pokemon-item';
+import { PokemonListComponent } from './components/pokemon-list';
+import { PokemonPaginationComponent } from './components/pokemon-pagination';
+import { PokemonSearchComponent } from './components/pokemon-search';
 import { PokemonView } from './views/pokemon';
 import { PokemonDetailsView } from './views/pokemon-details';
-import { PokemonCardComponent } from './components/pokemon-card';
 
 
 @NgModule({
@@ -17,7 +20,8 @@ import { PokemonCardComponent } from './components/pokemon-card';
     PokemonListComponent,
     PokemonSearchComponent,
     PokemonCardComponent,
-    PokemonDetailsView
+    PokemonDetailsView,
+    PokemonPaginationComponent
   ],
   imports: [
     CommonModule,
