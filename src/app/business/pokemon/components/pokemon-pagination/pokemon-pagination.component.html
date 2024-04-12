@@ -1,1 +1,7 @@
-<p>pokemon-pagination works!</p>
+<div class="pagination-container">
+  <select class="pagination-items" name="paginationItems" id="paginationItems" [(ngModel)]="limit" (change)="onSelectedValue($event)">
+    <option *ngFor="let item of paginationItems">
+      {{ item }}
+    </option>
+  </select>
+</div>

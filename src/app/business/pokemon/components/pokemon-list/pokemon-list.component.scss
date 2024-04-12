@@ -1,8 +1,7 @@
 .pokemon-list {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply items-start;
-    @apply justify-start;
-    @apply gap-2;
+  @apply flex;
+  @apply flex-row;
+  @apply flex-wrap;
+  @apply items-start;
+  @apply gap-2;
 }

@@ -9,9 +9,16 @@ import { PokemonPresenter } from './pokemon.presenter';
 })
 export class PokemonView {
 
+  offset: number;
+  defaultLimit: number;
+  limit: number;
+
   constructor(
     protected presenter: PokemonPresenter
   ) {
+    this.offset = 0;
+    this.defaultLimit = 12;
+    this.limit = this.defaultLimit;
   }
 
   onSearchPokemon(pokemonName: string) {
@@ -22,4 +29,9 @@ export class PokemonView {
     this.presenter.onSelectedPokemon(name);
   }
 
+  onChangedLimit(limit: number): void {
+    this.limit = limit;
+
+    this.presenter.getPokemonList(this.offset, this.limit);
+  }
 }

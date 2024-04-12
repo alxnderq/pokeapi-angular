@@ -28,7 +28,7 @@ export class PokemonPresenter {
       );
   }
 
-  getPokemonList(offset: number = 0, limit: number = 90): void {
+  getPokemonList(offset: number = 0, limit: number = 12): void {
     this.pokemonList$ = this.pokemonService.getAllPokemon(offset, limit)
       .pipe(
         switchMap((data: PokemonList): Observable<Pokemon[]> => {

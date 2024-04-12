@@ -1,0 +1,12 @@
+.pagination-container {
+  @apply bg-red-300;
+  @apply p-6;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.pagination-items {
+  @apply ml-auto;
+}
