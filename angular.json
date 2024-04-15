@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokeapi:build:production"
+              "buildTarget": "pokeapi:build:production"
             },
             "development": {
-              "browserTarget": "pokeapi:build:development"
+              "buildTarget": "pokeapi:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokeapi:build"
+            "buildTarget": "pokeapi:build"
           }
         },
         "test": {
