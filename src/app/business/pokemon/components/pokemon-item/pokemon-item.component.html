@@ -1,5 +1,6 @@
 <div class="pokemon-card" (click)="onSelectedPokemon()">
     <span class="card-id">#{{ pokemon.id | number: '3.0-0'}}</span>
-    <img class="card-image" [src]="pokemon.sprites.other['official-artwork'].front_default" alt="pokemon">
+    <img class="card-image" [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.id"
+      (error)="pokemon.sprites.other['official-artwork'].front_default = this.defaultPokemonImage">
     <span class="card-name">{{ pokemon.name }}</span>
 </div>

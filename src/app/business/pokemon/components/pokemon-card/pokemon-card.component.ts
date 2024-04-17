@@ -14,8 +14,11 @@ export class PokemonCardComponent implements OnChanges {
 
   pokemonType: string;
 
+  defaultPokemonImage: string;
+
   constructor() {
     this.pokemonType = 'normal';
+    this.defaultPokemonImage = '/assets/images/pokemon.png';
   }
 
   ngOnChanges(changes: SimpleChanges): void {

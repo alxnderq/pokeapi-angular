@@ -15,7 +15,10 @@ export class PokemonItemComponent implements OnChanges{
   @Input()
   pokemon!: Pokemon;
 
+  defaultPokemonImage: string;
+
   constructor() {
+    this.defaultPokemonImage = '/assets/images/pokemon.png';
   }
 
   ngOnChanges(changes: SimpleChanges): void {

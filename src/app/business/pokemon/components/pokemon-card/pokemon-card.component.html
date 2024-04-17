@@ -12,7 +12,7 @@
       </div>
       <div class="pokemon-card-image">
         <img class="pokemon-image-sprite" [src]="pokemon.sprites.other['official-artwork'].front_default"
-          [alt]="pokemon.name">
+          [alt]="pokemon.name" (error)="pokemon.sprites.other['official-artwork'].front_default = this.defaultPokemonImage">
       </div>
       <div class="pokemon-card-details">
         <div class="pokemon-card-types">
