@@ -1,5 +1,5 @@
 <ng-container *ngIf="pokemon">
-  <div [className]="'pokemon-card-container bg-' + pokemon.types[0].type.name">
+  <div [className]="'pokemon-card-container bg-' + this.pokemonType">
     <div class="pokemon-card">
       <div class="pokemon-card-header">
         <div class="pokemon-card-title">
@@ -21,7 +21,7 @@
           </ng-container>
         </div>
         <div class="pokemon-card-about">
-          <h2 [className]="'card-subtitle text-' + pokemon.types[0].type.name">About</h2>
+          <h2 [className]="'card-subtitle text-' + pokemonType">About</h2>
 
           <div class="pokemon-attributes">
             <div class="attribute-details">
@@ -56,16 +56,11 @@
           </div>
 
           <div class="pokemon-about-stats">
-            <h2 [className]="'card-subtitle text-' + pokemon.types[0].type.name">Base Stats</h2>
+            <h2 [className]="'card-subtitle text-' + this.pokemonType">Base Stats</h2>
           </div>
 
         </div>
       </div>
-
-
-
-
     </div>
   </div>
-
 </ng-container>
