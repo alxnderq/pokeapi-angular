@@ -35,7 +35,6 @@ export interface Types {
 export interface Type {
   name: string
   url: string
-  backgroundColor?: string
 }
 
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChange, SimpleChanges } from '@angular/core';
 import { Pokemon } from '../../models';
 
 @Component({
@@ -7,7 +7,7 @@ import { Pokemon } from '../../models';
   templateUrl: './pokemon-item.component.html',
   styleUrls: ['./pokemon-item.component.scss']
 })
-export class PokemonItemComponent implements OnChanges{
+export class PokemonItemComponent implements OnChanges {
 
   @Output()
   selectedPokemon: EventEmitter<string> = new EventEmitter<string>();
@@ -22,11 +22,18 @@ export class PokemonItemComponent implements OnChanges{
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes');
+    const change: SimpleChange = changes['pokemon'];
+    if (change && change.currentValue) {
+      this.pokemon = change.currentValue;
+    }
   }
 
   onSelectedPokemon() {
     this.selectedPokemon.emit(this.pokemon.name);
+  }
+
+  onErrorImage(): void {
+    this.pokemon.sprites.other['official-artwork'].front_default = this.defaultPokemonImage;
   }
 
 }

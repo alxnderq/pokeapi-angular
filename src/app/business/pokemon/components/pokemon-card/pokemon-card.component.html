@@ -1,5 +1,5 @@
 <ng-container *ngIf="pokemon">
-  <div class="pokemon-card-container" [ngClass]="this.backgroundColorClass">
+  <div [className]="'pokemon-card-container bg-' + pokemon.types[0].type.name">
     <div class="pokemon-card">
       <div class="pokemon-card-header">
         <div class="pokemon-card-title">
@@ -17,11 +17,11 @@
       <div class="pokemon-card-details">
         <div class="pokemon-card-types">
           <ng-container *ngFor="let item of pokemon.types">
-            <span [className]="'pokemon-type-tick ' + item.type.backgroundColor">{{ item.type.name }}</span>
+            <span [className]="'pokemon-type-tick bg-' + item.type.name">{{ item.type.name }}</span>
           </ng-container>
         </div>
         <div class="pokemon-card-about">
-          <h2 class="card-subtitle" [ngClass]="this.textColorClass">About</h2>
+          <h2 [className]="'card-subtitle text-' + pokemon.types[0].type.name">About</h2>
 
           <div class="pokemon-attributes">
             <div class="attribute-details">
@@ -56,7 +56,7 @@
           </div>
 
           <div class="pokemon-about-stats">
-            <h2 class="card-subtitle" [ngClass]="this.textColorClass">Base Stats</h2>
+            <h2 [className]="'card-subtitle text-' + pokemon.types[0].type.name">Base Stats</h2>
           </div>
 
         </div>
