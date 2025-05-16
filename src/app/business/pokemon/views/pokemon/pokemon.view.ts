@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { PokemonPresenter } from './pokemon.presenter';
 
 @Component({
-  selector: 'app-pokemon-view',
-  templateUrl: './pokemon.view.html',
-  styleUrls: ['./pokemon.view.scss'],
-  providers: [PokemonPresenter]
+    selector: 'app-pokemon-view',
+    templateUrl: './pokemon.view.html',
+    styleUrls: ['./pokemon.view.scss'],
+    providers: [PokemonPresenter],
+    standalone: false
 })
 export class PokemonView {
 

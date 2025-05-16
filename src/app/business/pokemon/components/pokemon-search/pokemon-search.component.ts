@@ -4,7 +4,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angul
     selector: 'app-pokemon-search',
     templateUrl: './pokemon-search.component.html',
     styleUrls: ['./pokemon-search.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PokemonSearchComponent {
 

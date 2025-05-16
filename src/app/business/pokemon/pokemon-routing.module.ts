@@ -5,25 +5,25 @@ import { PokemonView } from './views/pokemon';
 import { PokemonDetailsView } from './views/pokemon-details';
 
 const routes: Routes = [
-    {
+  {
+    path: '',
+    component: PokemonLayoutComponent,
+    children: [
+      {
         path: '',
-        component: PokemonLayoutComponent,
-        children: [
-            {
-                path: '',
-                component: PokemonView
-            },
-            {
-              path: 'pokemon/:name',
-              component: PokemonDetailsView
-            }
-        ]
-    }
+        component: PokemonView
+      },
+      {
+        path: 'pokemon/:name',
+        component: PokemonDetailsView
+      }
+    ]
+  }
 
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class PokemonRoutingModule { }

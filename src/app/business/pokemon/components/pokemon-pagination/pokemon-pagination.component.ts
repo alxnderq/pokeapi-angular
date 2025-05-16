@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-pokemon-pagination',
-  templateUrl: './pokemon-pagination.component.html',
-  styleUrls: ['./pokemon-pagination.component.scss']
+    selector: 'app-pokemon-pagination',
+    templateUrl: './pokemon-pagination.component.html',
+    styleUrls: ['./pokemon-pagination.component.scss'],
+    standalone: false
 })
 export class PokemonPaginationComponent implements OnChanges{
 

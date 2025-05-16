@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Out
 import { Pokemon } from '../../models';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-pokemon-item',
-  templateUrl: './pokemon-item.component.html',
-  styleUrls: ['./pokemon-item.component.scss']
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-pokemon-item',
+    templateUrl: './pokemon-item.component.html',
+    styleUrls: ['./pokemon-item.component.scss'],
+    standalone: false
 })
 export class PokemonItemComponent implements OnChanges {
 
