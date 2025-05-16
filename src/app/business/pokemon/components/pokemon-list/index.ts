@@ -1,1 +1,1 @@
-export * from './pokemon-list.component';
+export { PokemonListComponent } from './pokemon-list.component';

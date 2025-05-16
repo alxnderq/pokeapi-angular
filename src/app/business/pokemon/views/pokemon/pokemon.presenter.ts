@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Observable, combineLatest, of, switchMap } from "rxjs";
-import { Pokemon, PokemonList, PokemonResult } from "../../models";
-import { PokemonService } from "../../services";
+import {Injectable} from "@angular/core";
+import {ActivatedRoute, Router} from "@angular/router";
+import {combineLatest, Observable, of, switchMap} from "rxjs";
+import {Pokemon, PokemonList, PokemonResult} from "../../models";
+import {PokemonService} from "../../services";
 
 @Injectable()
 export class PokemonPresenter {
@@ -22,8 +22,7 @@ export class PokemonPresenter {
       .pipe(
         switchMap((pokemon: Pokemon): Observable<Pokemon[]> => {
           const array: Pokemon[] = [pokemon];
-          const observableArray: Observable<Pokemon[]> = of(array);
-          return observableArray;
+          return of(array);
         })
       );
   }

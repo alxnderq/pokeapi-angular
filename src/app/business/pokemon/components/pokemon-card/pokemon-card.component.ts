@@ -30,10 +30,6 @@ export class PokemonCardComponent implements OnChanges {
     }
   }
 
-  onImageError() {
-    this.pokemon.sprites.other['official-artwork'].front_default = this.defaultPokemonImage;
-  }
-
   get backgroundColorClass() {
     return {
       'bg-bug': this.pokemonType === PokemonTypes.BUG,

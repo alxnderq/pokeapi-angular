@@ -1,1 +1,1 @@
-export * from './pokemon-item.component';
+export { PokemonItemComponent } from './pokemon-item.component';
